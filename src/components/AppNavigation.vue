@@ -1,5 +1,9 @@
 <template>
-  <nav class="navbar navbar-light">
+  <div class="flex w-full h-3/6 bg-red-50 justify-center flex-col flex-wrap justify-items-center justify-self-center relative">
+    <Searcher />
+  </div>
+  <div class="flex w-full h-4/6 bg-green-500" />
+  <!-- <nav class="navbar navbar-light">
     <div class="container">
       <AppLink
         class="navbar-brand"
@@ -29,67 +33,68 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import type { AppRouteNames } from 'src/router'
-import { useUserStore } from 'src/store/user'
-import { computed } from 'vue'
-import type { RouteParams } from 'vue-router'
+// import { storeToRefs } from 'pinia'
+// import type { AppRouteNames } from 'src/router'
+// import { useUserStore } from 'src/store/user'
+// import { computed } from 'vue'
+// import type { RouteParams } from 'vue-router'
+import Searcher from './shared/searcher/Searcher.vue'
 
-interface NavLink {
-  name: AppRouteNames
-  params?: Partial<RouteParams>
-  title: string
-  icon?: string
-  display: 'all' | 'anonym' | 'authorized'
-}
+// interface NavLink {
+//   name: AppRouteNames
+//   params?: Partial<RouteParams>
+//   title: string
+//   icon?: string
+//   display: 'all' | 'anonym' | 'authorized'
+// }
 
-const { user } = storeToRefs(useUserStore())
+// const { user } = storeToRefs(useUserStore())
 
-const username = computed(() => user.value?.username)
-const displayStatus = computed(() => username.value ? 'authorized' : 'anonym')
+// const username = computed(() => user.value?.username)
+// const displayStatus = computed(() => username.value ? 'authorized' : 'anonym')
 
-const allNavLinks = computed<NavLink[]>(() => [
-  {
-    name: 'global-feed',
-    title: 'Home',
-    display: 'all',
-  },
-  {
-    name: 'login',
-    title: 'Sign in',
-    display: 'anonym',
-  },
-  {
-    name: 'register',
-    title: 'Sign up',
-    display: 'anonym',
-  },
-  {
-    name: 'create-article',
-    title: 'New Post',
-    display: 'authorized',
-    icon: 'ion-compose',
-  },
-  {
-    name: 'settings',
-    title: 'Settings',
-    display: 'authorized',
-    icon: 'ion-gear-a',
-  },
-  {
-    name: 'profile',
-    params: { username: username.value },
-    title: username.value || '',
-    display: 'authorized',
-  },
-])
+// const allNavLinks = computed<NavLink[]>(() => [
+//   {
+//     name: 'global-feed',
+//     title: 'Home',
+//     display: 'all',
+//   },
+//   {
+//     name: 'login',
+//     title: 'Sign in',
+//     display: 'anonym',
+//   },
+//   {
+//     name: 'register',
+//     title: 'Sign up',
+//     display: 'anonym',
+//   },
+//   {
+//     name: 'create-article',
+//     title: 'New Post',
+//     display: 'authorized',
+//     icon: 'ion-compose',
+//   },
+//   {
+//     name: 'settings',
+//     title: 'Settings',
+//     display: 'authorized',
+//     icon: 'ion-gear-a',
+//   },
+//   {
+//     name: 'profile',
+//     params: { username: username.value },
+//     title: username.value || '',
+//     display: 'authorized',
+//   },
+// ])
 
-const navLinks = computed(() => allNavLinks.value.filter(
-  l => l.display === displayStatus.value || l.display === 'all',
-))
+// const navLinks = computed(() => allNavLinks.value.filter(
+//   l => l.display === displayStatus.value || l.display === 'all',
+// ))
 
 </script>
