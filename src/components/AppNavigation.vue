@@ -1,8 +1,12 @@
 <template>
-  <div class="flex w-full h-3/6 bg-red-50 justify-center flex-col flex-wrap justify-items-center justify-self-center relative">
+  <!-- <div class="flex w-full h-3/6 bg-red-50 justify-center flex-col flex-wrap justify-items-center justify-self-center relative">
     <Searcher />
+  </div> -->
+  <div class="h-full bg-white">
+    <LogoKudos />
+    <UserSidebar />
+    <MenuSidebar />
   </div>
-  <div class="flex w-full h-4/6 bg-green-500" />
   <!-- <nav class="navbar navbar-light">
     <div class="container">
       <AppLink
@@ -42,7 +46,9 @@
 // import { useUserStore } from 'src/store/user'
 // import { computed } from 'vue'
 // import type { RouteParams } from 'vue-router'
-import Searcher from './shared/searcher/Searcher.vue'
+import LogoKudos from './shared/logo-kudos/LogoKudos.vue'
+import UserSidebar from './shared/sidebar/user-sidebar/UserSidebar.vue'
+import MenuSidebar from './shared/sidebar/user-sidebar/MenuSidebar.vue'
 
 // interface NavLink {
 //   name: AppRouteNames
