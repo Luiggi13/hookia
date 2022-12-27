@@ -1,7 +1,7 @@
 <template>
   <div class="container h-screen w-screen max-w-full">
     <div class="grid grid-cols-12 gap-0 max-h-max">
-      <AppNavigation class="sm:block md:block lg:block xl:block 2xl:block col-span-2" />
+      <AppNavigation class="hidden lg:block col-span-2" />
       <div class="col-span-10 bg-violet-200 py-3 px-10 max-h-max">
         <div>
           <Header />

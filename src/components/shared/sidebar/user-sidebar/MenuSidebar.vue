@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full max-h-screen flex-col py-8 px-4 overflow-auto">
+  <nav class="w-full h-screen flex-col py-8 px-4 overflow-auto">
     <ul>
       <li class="mb-4">
         <a class="flex items-center p-4 text-white bg-blue-500 rounded-xl" href="#">
