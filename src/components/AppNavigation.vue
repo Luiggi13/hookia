@@ -1,106 +1,36 @@
-<template>
-  <!-- <div class="flex w-full h-3/6 bg-red-50 justify-center flex-col flex-wrap justify-items-center justify-self-center relative">
-    <Searcher />
-  </div> -->
-  <div class="h-full bg-white">
-    <LogoKudos />
-    <UserSidebar />
-    <MenuSidebar />
-  </div>
-  <!-- <nav class="navbar navbar-light">
-    <div class="container">
-      <AppLink
-        class="navbar-brand"
-        name="global-feed"
-      >
-        conduit
-      </AppLink>
-
-      <ul class="nav navbar-nav pull-xs-right">
-        <li
-          v-for="link in navLinks"
-          :key="link.name"
-          class="nav-item"
-        >
-          <AppLink
-            class="nav-link"
-            active-class="active"
-            :name="link.name"
-            :params="link.params"
-          >
-            <i
-              v-if="link.icon"
-              :class="link.icon"
-            />
-            {{ link.title }}
-          </AppLink>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-</template>
-
 <script setup lang="ts">
-// import { storeToRefs } from 'pinia'
-// import type { AppRouteNames } from 'src/router'
-// import { useUserStore } from 'src/store/user'
-// import { computed } from 'vue'
-// import type { RouteParams } from 'vue-router'
 import LogoKudos from './shared/logo-kudos/LogoKudos.vue'
 import UserSidebar from './shared/sidebar/user-sidebar/UserSidebar.vue'
 import MenuSidebar from './shared/sidebar/user-sidebar/MenuSidebar.vue'
+import { useRecipeStore } from '../store/recipes'
+import { onBeforeMount } from 'vue'
 
-// interface NavLink {
-//   name: AppRouteNames
-//   params?: Partial<RouteParams>
-//   title: string
-//   icon?: string
-//   display: 'all' | 'anonym' | 'authorized'
-// }
+const recipeStore = useRecipeStore()
+const handleGetTodo = async () => {
+  await recipeStore.getTodos(recipeStore.recipesList._links?.next.href ?? '')
+}
 
-// const { user } = storeToRefs(useUserStore())
-
-// const username = computed(() => user.value?.username)
-// const displayStatus = computed(() => username.value ? 'authorized' : 'anonym')
-
-// const allNavLinks = computed<NavLink[]>(() => [
-//   {
-//     name: 'global-feed',
-//     title: 'Home',
-//     display: 'all',
-//   },
-//   {
-//     name: 'login',
-//     title: 'Sign in',
-//     display: 'anonym',
-//   },
-//   {
-//     name: 'register',
-//     title: 'Sign up',
-//     display: 'anonym',
-//   },
-//   {
-//     name: 'create-article',
-//     title: 'New Post',
-//     display: 'authorized',
-//     icon: 'ion-compose',
-//   },
-//   {
-//     name: 'settings',
-//     title: 'Settings',
-//     display: 'authorized',
-//     icon: 'ion-gear-a',
-//   },
-//   {
-//     name: 'profile',
-//     params: { username: username.value },
-//     title: username.value || '',
-//     display: 'authorized',
-//   },
-// ])
-
-// const navLinks = computed(() => allNavLinks.value.filter(
-//   l => l.display === displayStatus.value || l.display === 'all',
-// ))
-
+onBeforeMount(async () => await handleGetTodo())
 </script>
+
+<template>
+  <div class="h-full mybg">
+    <div class="bg-white pb-2 bg-superheader">
+      <LogoKudos />
+      <UserSidebar />
+    </div>
+    <MenuSidebar />
+  </div>
+</template>
+<style lang="scss">
+.mybg {
+  background: url(../assets/bg-landing2.webp), linear-gradient(90deg, rgba(250, 183, 99, 1) 15%, #dfb68d 51%, #c7ad98 72%, #ad9b91 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.bg-superheader {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+</style>

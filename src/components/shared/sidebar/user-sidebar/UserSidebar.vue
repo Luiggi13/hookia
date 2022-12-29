@@ -10,7 +10,7 @@
     <span>Christian Llansola</span>
     <span class="text-gray-400 font-normal">Subtitle</span>
   </p>
-  <div class="w-3/6 shadow-md p-2 rounded-xl flex flex-row mx-auto mt-4 justify-center mb-5">
+  <div class="w-3/6 shadow-md p-2 rounded-xl flex flex-row mx-auto mt-4 justify-center mb-5 bg-white">
     <span class="my-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"

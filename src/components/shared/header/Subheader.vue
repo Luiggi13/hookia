@@ -18,7 +18,7 @@
             156
           </p>
           <p class="text-center text-xl">
-            Tutorials
+            Recipes
           </p>
         </div>
       </div>
@@ -28,7 +28,7 @@
             156
           </p>
           <p class="text-center text-xl">
-            Tutorials
+            Ingredients
           </p>
         </div>
       </div>
