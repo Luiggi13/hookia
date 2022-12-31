@@ -2,19 +2,10 @@
 import LogoKudos from './shared/logo-kudos/LogoKudos.vue'
 import UserSidebar from './shared/sidebar/user-sidebar/UserSidebar.vue'
 import MenuSidebar from './shared/sidebar/user-sidebar/MenuSidebar.vue'
-import { useRecipeStore } from '../store/recipes'
-import { onBeforeMount } from 'vue'
-
-const recipeStore = useRecipeStore()
-const handleGetTodo = async () => {
-  await recipeStore.getTodos(recipeStore.recipesList._links?.next.href ?? '')
-}
-
-onBeforeMount(async () => await handleGetTodo())
 </script>
 
 <template>
-  <div class="h-full mybg">
+  <div class="h-screen mybg">
     <div class="bg-white pb-2 bg-superheader">
       <LogoKudos />
       <UserSidebar />

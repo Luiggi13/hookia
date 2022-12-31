@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { useRecipeStore } from '../../../store/recipes'
+import LoadingCircle from '../loading/LoadingCircle.vue'
 const recipeStore = useRecipeStore()
 
+const handlePrevItems = async () => {
+  await recipeStore.getRecipes(recipeStore.prev)
+}
 const handleNextItems = async () => {
   if (recipeStore.recipesList._links?.next.href) recipeStore.prev = recipeStore.recipesList._links?.next.href
-  await recipeStore.getTodos(recipeStore.recipesList._links?.next.href ?? '')
+  await recipeStore.getRecipes(recipeStore.recipesList._links?.next.href ?? '')
 }
 const maxStars: number = 5
 
 </script>
 <template>
-  <slot v-if="recipeStore.recipesList.hits?.length">
+  <template v-if="recipeStore.recipesList.hits?.length">
     <div class="grid grid-cols-4 gap-4 mb-10">
       <div
         v-for="item in recipeStore.recipesList.hits"
@@ -112,11 +116,11 @@ const maxStars: number = 5
         </div>
       </div>
     </div>
-    <div class="flex w-full justify-center">
+    <div class="flex w-full h-full justify-center pb-10">
       <button
         :disabled="recipeStore.recipesList.from <= 1"
         class="flex p-5 bg-red-300 rounded-lg mr-4 disabled:bg-gray-50 disabled:text-gray-400"
-        @click="handleNextItems"
+        @click="handlePrevItems"
       >
         Prev Page
       </button>
@@ -128,10 +132,10 @@ const maxStars: number = 5
         {{ recipeStore.recipesList._links?.next.title }}
       </button>
     </div>
-  </slot>
-  <p v-else>
-    Loading ...
-  </p>
+  </template>
+  <template v-else>
+    <LoadingCircle />
+  </template>
 </template>
 
 <style scoped lang="scss">

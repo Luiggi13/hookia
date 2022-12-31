@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { useRecipeStore } from '../../../store/recipes'
+const recipeStore = useRecipeStore()
+
+</script>
 <template>
   <div class="w-9/12 md:mr-4 flex flex-row">
     <img class="w-2/12" src="@assets/icon-section.png">
@@ -15,20 +20,20 @@
       <div class="flex flex-col justify-center items-center h-full w-full">
         <div class="flex flex-col border-r-2 border-gray-300 w-full">
           <p class="text-center text-[3rem] font-extrabold">
-            156
+            {{ recipeStore.recipesList.count || 0 }}
           </p>
           <p class="text-center text-xl">
-            Recipes
+            Total recipes
           </p>
         </div>
       </div>
       <div class="flex flex-col justify-center items-center h-full w-full">
         <div class="flex flex-col w-full">
           <p class="text-center text-[3rem] font-extrabold">
-            156
+            {{ recipeStore.recipesList.hits?.length || 0 }}
           </p>
           <p class="text-center text-xl">
-            Ingredients
+            Recipes per page
           </p>
         </div>
       </div>
