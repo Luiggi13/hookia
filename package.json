@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "vite build",
     "serve": "vite preview --port 4137",
     "lint:script": "eslint \"{src/**/*.{ts,vue},cypress/**/*.ts}\"",
