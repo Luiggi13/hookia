@@ -16,17 +16,17 @@
     <div class="container grid md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto z-20 grid-rows-1">
       <div class="w-full rounded mb-5">
         <a href="https://www.instagram.com/p/CnusnuFII8v/" alt="Instagram: AI Urban Magazine #1">
-          <img class="img__med mx-auto" src="../assets/revistas/rev 1.png" alt="AI Urban Magazine #1">
+          <img class="img__med mx-auto" src="@assets/revistas/rev_1.png" alt="AI Urban Magazine #1">
         </a>
       </div>
       <div class="w-full rounded mb-5">
         <a href="https://www.instagram.com/p/CnusogmIRHl/" alt="Instagram: AI Urban Magazine #2">
-          <img class="img__med mx-auto" src="../assets/revistas/rev 2.png" alt="AI Urban Magazine #2">
+          <img class="img__med mx-auto" src="@assets/revistas/rev_2.png" alt="AI Urban Magazine #2">
         </a>
       </div>
       <div class="w-full rounded mb-5">
         <a href="https://www.instagram.com/p/CnuspPzIpqN/" alt="Instagram: AI Urban Magazine #3">
-          <img class="img__med mx-auto" src="../assets/revistas/rev 3.png" alt="AI Urban Magazine #3">
+          <img class="img__med mx-auto" src="@assets/revistas/rev_3.png" alt="AI Urban Magazine #3">
         </a>
       </div>
     </div>
