@@ -1,7 +1,7 @@
 <template>
   <div class="my-bg flex h-screen w-screen max-w-full items-center justify-center text-white relative">
     <div class="bg-overlay" />
-    <a class="w-1/2 h-auto z-20" href="https://www.instagram.com/hook.ia/" target="_blank" title="Hook.ia Instagram profile">
+    <a class="sm:w-full w-full h-auto z-20 flex items-center justify-center" href="https://www.instagram.com/hook.ia/" target="_blank" title="Hook.ia Instagram profile">
       <img src="./assets/logo.png">
     </a>
     <!-- <template v-if="recipeStore.recipesList.hits?.length">
