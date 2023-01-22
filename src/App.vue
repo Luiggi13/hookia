@@ -1,6 +1,8 @@
 <template>
   <div class="bg-black flex h-screen w-screen max-w-full items-center justify-center text-white">
-    <img src="./assets/logo.png">
+    <a class="w-1/2 h-auto" href="https://www.instagram.com/hook.ia/" target="_blank" title="Hook.ia Instagram profile">
+      <img src="./assets/logo.png">
+    </a>
     <!-- <template v-if="recipeStore.recipesList.hits?.length">
       <AppNavigation class="h-screen mybg w-60 fixed left-0 top-0" />
       <div class="block w-full h-screen pl-60">
