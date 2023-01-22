@@ -2,7 +2,7 @@
   <div class="my-bg flex flex-col h-screen w-screen max-w-full items-center justify-center text-white relative">
     <div class="bg-overlay" />
     <a
-      class="w-3/12 sm:w-full md:w-full h-auto z-20 flex items-center justify-center"
+      class="w-11/12 lg:w-6/12 h-auto z-20 flex items-center justify-center"
       href="https://www.instagram.com/hook.ia/"
       target="_blank"
       title="Hook.ia Instagram profile"
@@ -10,7 +10,7 @@
       <img src="./assets/logo.png">
     </a>
     <form
-      class="flex items-center justify-center flex-col z-20 w-full px-24 lg:px-0"
+      class="flex items-center justify-center flex-col z-20 md:px-10 lg:px-0 w-full"
       @submit.prevent
     >
       <!-- <div class="mb-6">
@@ -18,7 +18,7 @@
         <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
     </div>  -->
       <div class="mb-6">
-        <h1 class="text-2xl">
+        <h1 class="text-2xl text-center w-11/12 lg:w-full">
           Do you want to participate in our next <span class="font-bold">Weekly Online Magazine</span>?
         </h1>
         <div v-if="isUserCreated" class="message bg-green-400 border-green-800 border-2 text-center text-lg text-black p-2 rounded-lg mt-6">
@@ -28,7 +28,7 @@
           {{ message }}
         </div>
       </div>
-      <div class="mb-6 sm:w-full lg:w-6/12 w-6/12">
+      <div class="mb-6 w-11/12 lg:w-6/12">
         <label for="ig_user" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Email</label>
         <div class="relative">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
