@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: black;
+}
 :root.dark-theme {
   --background-color-primary: #1e1e1e;
   --background-color-secondary: #2d2d30;

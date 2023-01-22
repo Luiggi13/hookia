@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import { createClient } from '@supabase/supabase-js'
-
+import { CONFIG } from 'src/config'
 export const useSupaBaseStore = defineStore('supabase', () => {
-  const supabaseInstance = createClient('https://utlbqbzipryqmkcinunf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV0bGJxYnppcHJ5cW1rY2ludW5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njg4MDExOTUsImV4cCI6MTk4NDM3NzE5NX0.IdKGj1RXUA3IA4IghdDSIs_qD7xLuAlC6ByX4OezP00')
+  const supabaseInstance = createClient(CONFIG.VITE_SUPABASE_URL, CONFIG.VITE_SUPABASE_KEY)
   // const getRecipes = async (next?: string) => {
   //   resetRecipes()
   //   try {
