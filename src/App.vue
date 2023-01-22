@@ -110,7 +110,7 @@ const addUser = async () => {
   if (!error) {
     user.value = ''
     isUserCreated.value = true
-    message.value = 'Usuario creado correctamente'
+    message.value = 'You are added to our community'
     setTimeout(() => {
       isUserCreated.value = false
       message.value = ''
@@ -119,7 +119,7 @@ const addUser = async () => {
   if (error) {
     if (error?.message.includes('duplicate key')) {
       isError.value = true
-      message.value = 'Usuario ya existente'
+      message.value = 'User already added in our community'
     }
   }
 }
