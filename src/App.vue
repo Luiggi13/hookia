@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-black flex h-screen w-screen max-w-full items-center justify-center text-white">
-    <a class="w-1/2 h-auto" href="https://www.instagram.com/hook.ia/" target="_blank" title="Hook.ia Instagram profile">
+  <div class="my-bg flex h-screen w-screen max-w-full items-center justify-center text-white relative">
+    <div class="bg-overlay" />
+    <a class="w-1/2 h-auto z-20" href="https://www.instagram.com/hook.ia/" target="_blank" title="Hook.ia Instagram profile">
       <img src="./assets/logo.png">
     </a>
     <!-- <template v-if="recipeStore.recipesList.hits?.length">
@@ -46,7 +47,17 @@
 <style lang="scss" scoped>
 .my-bg {
   background-color: black;
-  // background-image: url(./assets/bg-landing2.webp);
-
-}
+  background-image: url(./assets/bg_pattern-small.png);
+ }
+ .bg-overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,.63);
+    filter: blur(100px);
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+ }
 </style>
