@@ -21,7 +21,7 @@
           <p class="text-pinker text-center mt-5 text-xl font-bold">Wallpaper 1# : Security Day</p>
           <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Download</p>
         </a>
-        <a href="/wallpapers/wallpaper_security.png" target="_blank" alt="Hookia wallpaper security day #1">
+        <a href="/public/wallpapers/wallpaper_security.png" target="_blank" alt="Hookia wallpaper security day #1">
           <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Open in new tab</p>
         </a>
       </div>
