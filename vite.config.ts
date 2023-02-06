@@ -17,6 +17,5 @@ export default defineConfig({
   plugins: [
     vue(),
     analyzer({ summaryOnly: true }),
-  ],
-  appType: 'spa'
+  ]
 })
