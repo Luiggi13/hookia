@@ -81,10 +81,6 @@ export const isArticlesType = (type: any): type is ArticlesType => articlesTypes
 
 const routeNameToArticlesType: Partial<Record<AppRouteNames, ArticlesType>> = {
   'global-feed': 'global-feed',
-  'my-feed': 'my-feed',
-  'tag': 'tag-feed',
-  'profile': 'user-feed',
-  'profile-favorites': 'user-favorites-feed',
 }
 
 interface UseArticlesMetaReturn {
