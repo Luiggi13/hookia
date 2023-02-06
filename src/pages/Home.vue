@@ -22,7 +22,7 @@
           <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Download</p>
         </a>
         <a href="/wallpaper_security.png" target="_blank" alt="Hookia wallpaper security day #1">
-          <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Open in new tab</p>
+          <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Open image in new tab</p>
         </a>
       </div>
       <div class="w-full rounded mb-5" />
