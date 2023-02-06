@@ -19,8 +19,11 @@
     </div>  -->
       <div class="mb-6">
         <h1 class="text-2xl text-center w-11/12 lg:w-full">
-          Do you want to participate in our next <span class="font-bold">Weekly Online Magazine</span>?
+          Do you want to participate in our next project? <span class="font-bold">AI Online Magazine</span>?
         </h1>
+        <h2 class="text-sm text-center w-11/12 lg:w-full mt-2">
+          Sign up with your instagram user to participate in <span class="font-black text-lg">AI Urban Magazine</span>
+        </h2>
         <div v-if="isUserCreated" class="message bg-green-400 border-green-800 border-2 text-center text-lg text-black p-2 rounded-lg mt-6">
           {{ message }}
         </div>
@@ -61,45 +64,20 @@
             class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             @click="addUser"
           >
-            I will join
+            I'd like to participate
           </button>
         </div>
-        <h2 class="text-sm text-center w-11/12 lg:w-full mt-2">
-          Sign up with your instagram user to participate in <span class="font-black text-lg">AI Urban Magazine</span>
-        </h2>
       </div>
       <div class="flex mb-6 w-11/12 lg:w-6/12 items-center justify-center">
         <router-link
-          to="/gallery"
+          to="/downloads"
           class="text-white right-2.5 bottom-2.5 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:focus:ring-0 z-20"
         >
-          <img class="h-28" src="../assets/gallery.png">
+          <img class="h-28 animate-bounce" src="../assets/download_btn.png">
         </router-link>
       </div>
     </form>
-    <!-- <template v-if="recipeStore.recipesList.hits?.length">
-      <AppNavigation class="h-screen mybg w-60 fixed left-0 top-0" />
-      <div class="block w-full h-screen pl-60">
-        <div class="col-span-10 py-3 px-10 h-screen bg-violet-200">
-          <div class="h-1/3">
-            <Header />
-            <section class="flex flex-row md:flex-row md:items-center mt-10 px-4">
-              <Subheader />
-            </section>
-          </div>
-          <div class="h-2/4">
-            <section class="flex flex-col px-4 h-full mt-10">
-              <GridSection />
-            </section>
-          </div>
-        </div>
-      </div>
-    </template>
-    <template v-else>
-      <LoadingCircle />
-    </template> -->
   </div>
-  <!-- <AppFooter /> -->
 </template>
 
 <script setup lang="ts">import { ref } from 'vue'

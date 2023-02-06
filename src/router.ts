@@ -2,11 +2,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteParams, RouteRecordRaw } from 'vue-router'
 import Home from './pages/Home.vue'
 import Gallery from './pages/Gallery.vue'
+import Downloads from './pages/Downloads.vue'
 import { isAuthorized } from './store/user'
 
 export type AppRouteNames =
   | 'global-feed'
   | 'gallery'
+  | 'downloads'
   | 'my-feed'
   | 'tag'
   | 'article'
@@ -28,6 +30,11 @@ export const routes: RouteRecordRaw[] = [
     name: 'gallery',
     path: '/gallery',
     component: Gallery,
+  },
+  {
+    name: 'downloads',
+    path: '/downloads',
+    component: Downloads,
   },
   {
     name: 'my-feed',
