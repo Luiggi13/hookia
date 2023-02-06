@@ -18,4 +18,5 @@ export default defineConfig({
     vue(),
     analyzer({ summaryOnly: true }),
   ],
+  appType: 'spa'
 })
