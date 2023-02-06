@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteParams, RouteRecordRaw } from 'vue-router'
 import Home from './pages/Home.vue'
 import Gallery from './pages/Gallery.vue'
@@ -88,9 +88,13 @@ export const routes: RouteRecordRaw[] = [
     path: '/settings',
     component: () => import('./pages/Settings.vue'),
   },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/downloads',
+  },
 ]
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })
 
