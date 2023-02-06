@@ -88,7 +88,7 @@ const onSubmit = async () => {
   const filteredForm = Object.entries(form).reduce((a, [k, v]) => v === null ? a : { ...a, [k]: v }, {})
   const userData = await api.user.updateCurrentUser({ user: filteredForm }).then(res => res.data.user)
   userStore.updateUser(userData)
-  await routerPush('profile', { username: userData.username })
+  // await routerPush('profile', { username: userData.username })
 }
 
 const onLogout = async () => {
@@ -97,7 +97,7 @@ const onLogout = async () => {
 }
 
 onMounted(async () => {
-  if (!userStore.isAuthorized) return await routerPush('login')
+  // if (!userStore.isAuthorized) return await routerPush('login')
 
   form.image = userStore.user?.image
   form.username = userStore.user?.username
