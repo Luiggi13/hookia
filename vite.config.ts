@@ -7,15 +7,15 @@ const path = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: 'wallpapers',
   resolve: {
     alias: {
       src: fileURLToPath(new URL('./src', import.meta.url)),
       '@assets' : path.resolve(__dirname, './src/assets')
-
     },
   },
   plugins: [
     vue(),
     analyzer({ summaryOnly: true }),
-  ],
+  ]
 })

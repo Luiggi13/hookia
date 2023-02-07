@@ -62,30 +62,6 @@ const allLinks = computed<ArticlesListNavLink[]>(() => [
     routeName: 'global-feed',
     title: 'Global Feed',
   },
-  {
-    name: 'my-feed',
-    routeName: 'my-feed',
-    title: 'Your Feed',
-  },
-  {
-    name: 'tag-feed',
-    routeName: 'tag',
-    routeParams: { tag: props.tag },
-    title: props.tag,
-    icon: 'ion-pound',
-  },
-  {
-    name: 'user-feed',
-    routeName: 'profile',
-    routeParams: { username: props.username },
-    title: 'My articles',
-  },
-  {
-    name: 'user-favorites-feed',
-    routeName: 'profile-favorites',
-    routeParams: { username: props.username },
-    title: 'Favorited Articles',
-  },
 ])
 
 const { isAuthorized } = storeToRefs(useUserStore())

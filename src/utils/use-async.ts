@@ -18,7 +18,7 @@ export default function useAsync<T extends (...args: unknown[]) => unknown> (fn:
       return result as ReturnType<T>
     } catch (error) {
       if (isFetchError(error) && error.status === 401) {
-        await routerPush('login')
+        await routerPush('global-feed')
         throw new Error('Need to login first')
       }
       throw error
