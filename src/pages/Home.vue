@@ -16,10 +16,9 @@
     <div class="container grid md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto z-20 grid-rows-1">
       <div class="w-full rounded mb-5" />
       <div class="w-full rounded mb-5">
-        <a href="@assets/wallpapers/wallpaper_security_sm.png" alt="Hookia wallpaper security day #1" download>
+        <a href="/wallpaper_security.png" target="_blank" alt="Hookia wallpaper security day #1">
           <img class="img__med mx-auto glow-pinker hover:glow-pinker-0 p-1 rounded-md" src="@assets/wallpapers/wallpaper_security_sm.png" alt="Hookia wallpaper security day #1">
           <p class="text-pinker text-center mt-5 text-xl font-bold">Wallpaper 1# : Security Day</p>
-          <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Download</p>
         </a>
         <a href="/wallpaper_security.png" target="_blank" alt="Hookia wallpaper security day #1">
           <p class="bg-green-600 text-white mx-auto mt-3 text-center rounded-md p-3 w-1/2">Open image in new tab</p>
